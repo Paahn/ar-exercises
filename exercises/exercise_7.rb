@@ -10,3 +10,9 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+class Employee
+  validates :first_name
+  validates :last_name
+  validates :hourly_rate, inclusion: { in: 40..200}
+  validates :store_id
+end
