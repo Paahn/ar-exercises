@@ -15,5 +15,10 @@ store5.save
 store6.save
 @mens_stores = Store.where(mens_apparel: true)
 @mens_stores.each do |s|  
-  puts "#{s.name} has annual revenue #{s.annual_revenue}"
+  puts "#{s.name} has annual revenue #{s.annual_revenue}."
+end
+
+@low_earning_women_stores = Store.where(womens_apparel: true)
+@low_earning_women_stores.each do |w|
+  puts "#{w.name} has annual revenue #{w.annual_revenue}."
 end
